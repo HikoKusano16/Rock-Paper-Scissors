@@ -1,8 +1,5 @@
 import random as rd
 import os
-import colorama
-from colorama import Fore, Back, Style
-colorama.init()
 
 moves = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
@@ -99,78 +96,67 @@ def play():
         global lose
         global draw
         if plact == 'R' and enemact == 'Rock' or plact == 'P' and enemact == 'Paper' or plact == 'S' and enemact == 'Scissors' or plact == 'L' and enemact == 'Lizard' or plact == 'O' and enemact == 'Spock':
-            print(Back.BLUE + 'Draw!')
-            print(Style.RESET_ALL)
+            print('Draw!')
             draw = draw + 1
             reg = open("txtfiles\draws.txt", "w")
             reg.write(str(draw))
             reg.close()
         if plact == 'R' and enemact == 'Scissors' or plact == 'R' and enemact == 'Lizard':
-            print(Back.GREEN + 'You Won!')
-            print(Style.RESET_ALL)
+            print('You Won!')
             win = win + 1
             reg = open("txtfiles\wins.txt", "w")
             reg.write(str(win))
             reg.close()
         elif plact == 'P' and enemact == 'Rock' or plact == 'P' and enemact == 'Spock':
-            print(Back.GREEN + 'You Won!')
-            print(Style.RESET_ALL)
+            print('You Won!')
             win = win + 1
             reg = open("txtfiles\wins.txt", "w")
             reg.write(str(win))
             reg.close()
         elif plact == 'S' and enemact == 'Paper' or plact == 'S' and enemact == 'Lizard':
-            print(Back.GREEN + 'You Won!')
-            print(Style.RESET_ALL)
+            print('You Won!')
             win = win + 1
             reg = open("txtfiles\wins.txt", "w")
             reg.write(str(win))
             reg.close()
         elif plact == 'L' and enemact == 'Paper' or plact == 'L' and enemact == 'Spock':
-            print(Back.GREEN + 'You Won!')
-            print(Style.RESET_ALL)
+            print('You Won!')
             win = win + 1
             reg = open("txtfiles\wins.txt", "w")
             reg.write(str(win))
             reg.close()
         elif plact == 'O' and enemact == 'Rock' or plact == 'O' and enemact == 'Scissors':
-            print(Back.GREEN + 'You Won!')
-            print(Style.RESET_ALL)
+            print('You Won!')
             win = win + 1
             reg = open("txtfiles\wins.txt", "w")
             reg.write(str(win))
             reg.close()
         elif plact == 'R' and enemact == 'Paper' or plact == 'R' and enemact == 'Spock':
-            print(Back.RED + 'You Lost!')
-            print(Style.RESET_ALL)
+            print('You Lost!')
             lose = lose + 1
             reg = open("txtfiles\loss.txt", "w")
             reg.write(str(lose))
             reg.close()
         elif plact == 'P' and enemact == 'Scissors' or plact == 'P' and enemact == 'Lizard':
-            print(Back.RED + 'You Lost!')
-            print(Style.RESET_ALL)
+            print('You Lost!')
             lose = lose + 1
             reg = open("txtfiles\loss.txt", "w")
             reg.write(str(lose))
             reg.close()
         elif plact == 'S' and enemact == 'Rock' or plact == 'S' and enemact == 'Spock':
-            print(Back.RED + 'You Lost!')
-            print(Style.RESET_ALL)
+            print('You Lost!')
             lose = lose + 1
             reg = open("txtfiles\loss.txt", "w")
             reg.write(str(lose))
             reg.close()
         elif plact == 'L' and enemact == 'Rock' or plact == 'L' and enemact == 'Scissors':
-            print(Back.RED + 'You Lost!')
-            print(Style.RESET_ALL)
+            print('You Lost!')
             lose = lose + 1
             reg = open("txtfiles\loss.txt", "w")
             reg.write(str(lose))
             reg.close()
         elif plact == 'O' and enemact == 'Paper' or plact == 'O' and enemact == 'Lizard':
-            print(Back.RED + 'You Lost!')
-            print(Style.RESET_ALL)
+            print('You Lost!')
             lose = lose + 1
             reg = open("txtfiles\loss.txt", "w")
             reg.write(str(lose))
